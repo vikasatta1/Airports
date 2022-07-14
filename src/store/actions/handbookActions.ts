@@ -15,8 +15,8 @@ export const fetchHandBooks = () => {
             console.log(response)
             dispatch(handbookSlice.actions.fetchSuccess({
                 types: response[0].data,
-                regions: response[0].data,
-                countries: response[0].data,
+                regions: response[1].data,
+                countries: response[2].data,
 
             }))
         } catch (e) {

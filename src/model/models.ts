@@ -6,7 +6,6 @@ export interface IAirport {
     region:string
     type:string
     country:string
-
 }
 
 export interface ServerResponse<T> {
@@ -18,3 +17,10 @@ export interface ServerResponse<T> {
 export type IAirportType = string
 export type IAirportRegion = string
 export type IAirportCountry = string
+
+
+export interface IFilter {
+    type: IAirportType
+    region:IAirportRegion
+    country:IAirportCountry
+}

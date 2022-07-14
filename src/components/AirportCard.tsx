@@ -2,8 +2,9 @@ import React from 'react';
 import {IAirport} from "../model/models";
 import classes from './AirportCard.module.css'
 import {useNavigate} from "react-router-dom";
-interface AirportCardProps{
-    airport:IAirport
+
+interface AirportCardProps {
+    airport: IAirport
 }
 
 const AirportCard = ({airport}: AirportCardProps) => {
@@ -12,7 +13,7 @@ const AirportCard = ({airport}: AirportCardProps) => {
     const clickHAndler = () => navigate(`/airport/${airport.id}`)
     return (
         <div className={classes.card} onClick={clickHAndler}>
-           <p className={'text-lg font-bold'}>{airport.name}</p>
+            <p className={'text-lg font-bold'}>{airport.name}</p>
             <p>{airport?.region}</p>
             <p>{airport?.type}</p>
             <p>{airport?.country}</p>
