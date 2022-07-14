@@ -1,8 +1,10 @@
 import React, {ChangeEvent, useEffect, useState} from 'react';
-import {useAppSelector} from "../hook/redux";
+import {useAppDispatch, useAppSelector} from "../hook/redux";
 import {IFilter} from "../model/models";
+import {airportSlice} from "../store/slices/airportSlice";
 
 const AirportFilter = () => {
+    const dispatch = useAppDispatch()
     const {regions, loading, types, countries} = useAppSelector(state => state.handbook)
     const [hasFilter, setHasFilter] = useState(false)
     const [filter, setFilter] = useState<IFilter>({
@@ -32,6 +34,9 @@ const AirportFilter = () => {
         }else{
             setHasFilter(false)
         }
+
+
+        dispatch(airportSlice.actions.filter(filter))
     },[filter])
     if (loading) return <p className={'text-center'}>Loading...</p>
     return (
