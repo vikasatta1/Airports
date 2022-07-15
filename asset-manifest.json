@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Airports/static/css/main.c7b6d2e2.css",
+    "main.js": "/Airports/static/js/main.a7c4aeea.js",
+    "index.html": "/Airports/index.html",
+    "main.c7b6d2e2.css.map": "/Airports/static/css/main.c7b6d2e2.css.map",
+    "main.a7c4aeea.js.map": "/Airports/static/js/main.a7c4aeea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7b6d2e2.css",
+    "static/js/main.a7c4aeea.js"
+  ]
+}
